@@ -1,0 +1,78 @@
+.createbody{
+background:url('../images/bg_todo.jpg')no-repeat center fixed;
+background-size: cover;
+}
+.main{
+    text-align:center;
+    width:95%;
+
+    background-color:transparent;
+    margin-top:35%;
+    border-radius:10px;
+    color:black;
+}
+
+.text_inp{
+color:black;
+font-size: 17px;
+font-weight: 500;
+width:92%;
+
+border: 0;
+border-bottom: 2px solid black;
+outline: 0;
+background-color:yellow;
+border-radius:10px;
+}
+
+.btn_submit{
+width:92%;
+margin-top:8%;
+
+}
+
+h2{
+color:yellow;
+background-color:black;
+}
+
+.todolist{
+background:url('../images/bg_todo001.jpg')no-repeat center fixed;
+background-size: cover;
+}
+
+.main_todolist{
+    justify-content:center;
+    width:100%;
+    border:3px solid #37373d;
+    background-color:transparent;
+    margin-top:5%;
+    border-radius:10px;
+    color:white;
+}
+
+.h2todo{
+color:white;
+background-color:#37373d;
+text-align:center;
+}
+
+.table_head{
+font-size:20px;
+font-weight: 500;
+}
+
+.createlink{
+margin-left:5%;
+margin-bottom:1%;
+}
+
+label{
+color:white;
+font-size: 17px;
+font-weight: 500;
+background-color:#363636;
+width:50%;
+margin-top:5%;
+border-radius:10px;
+}

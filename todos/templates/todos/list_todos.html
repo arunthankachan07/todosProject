@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="{%static 'css/style.css'%}">
+</head>
+<body class="todolist">
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="">
+                <div><h2 class="h2todo">Todos List</h2></div>
+                <div class="createlink">
+                    <a class="btn btn-dark" href="{%url 'createtodo'%}">Create Todo</a>
+                </div>
+                <!--            <div>-->
+                <!--                <table class="table table-dark table-striped">-->
+                <!--                    <tr>-->
+                <!--                        <td class="table_head">Task</td>-->
+                <!--                        <td class="table_head">Date</td>-->
+                <!--                        <td class="table_head">Status</td>-->
+
+                <!--                        <td></td>-->
+                <!--                        <td></td>-->
+                <!--                        <td></td>-->
+                <!--                    </tr>-->
+                <!--                    {%for td in todos%}-->
+                <!--                    <tr>-->
+                <!--                        <td>{{td.task}}</td>-->
+                <!--                        <td>{{td.date}}</td>-->
+                <!--                        <td>{{td.status}}</td>-->
+
+                <!--                        <td><a href="{% url 'viewtodo' td.id%}" class="btn btn-success">View</a></td>-->
+                <!--                         <td><a href="{% url 'updatetodo' td.id%}" class="btn btn-success">Update</a></td>-->
+                <!--                        <td><a href="{% url 'deletetodo' td.id%}" class="btn btn-danger">Delete</a></td>-->
+                <!--                    </tr>-->
+                <!--                    {% endfor %}-->
+
+
+                <!--                </table>-->
+                <!--            </div>-->
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!--div-->
+<div class="container">
+    <div class="row">
+        {%for td in todos%}
+        <div class="col-4">
+            <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+                <div class="card-header"><h5 class="card-title">{{td.task}}</h5>
+
+                  <div style="text-align:right">
+                       <a href="{% url 'viewtodo' td.id%}" ><img src="{%static 'images/eye.svg'%}"></a>
+                    <a href="{% url 'updatetodo' td.id%}"><img src="{%static 'images/edit.svg'%}"></a>
+                    <a href="{% url 'deletetodo' td.id%}"><img src="{%static 'images/trash.svg'%}"></a>
+                  </div>
+
+                </div>
+                <div class="card-body">
+                    <h6 class="card-title">Task: {{td.task}}</h6>
+                    <h6 class="card-title">Date: {{td.date}}</h6>
+                    <h6 class="card-title">Status: {{td.status}}</h6>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+
+    </div>
+</div>
+
+</body>
+</html>
